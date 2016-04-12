@@ -53,7 +53,7 @@ class RegisterController extends Controller
 
                 $clientCollection->save($obj);
 
-                header('Location: index.php?c=tours&m=index');
+                header('Location: index.php?c=login&m=login');
             }
         }
 
@@ -133,5 +133,7 @@ class RegisterController extends Controller
         }
 
         return $errors;
+        $this->loadFrontView('profile/register', $errors);
     }
+
 }

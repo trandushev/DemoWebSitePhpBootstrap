@@ -10,8 +10,17 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Please sign up for MeOutdoor <small>It's free!</small></h3>
+                    <?php
+                    if(!empty($errors)) { ?>
+                        <div class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong><?php  echo $errors['username']; ?></strong>
+                        </div>
+                    <?php }
+                    ?>
                 </div>
                 <div class="panel-body">
+
                     <form action="" role="form" method="post">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">

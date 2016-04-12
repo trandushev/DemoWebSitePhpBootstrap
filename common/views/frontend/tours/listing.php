@@ -6,11 +6,22 @@
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Дестинации
+            <h1 class="page-header">
+                <?php
+                $categoryCollection = new CategoryCollection();
+                $categories = $categoryCollection->getOne($_GET['id']);
+                ?>
 
+                <?php if(($_GET['id']) == 0){
+                    echo "Всички дестинации";
+                }else {
+                    echo $categories->getName();
+                };
+                ?>
                 <small><a href=""></a></small>
 
             </h1>
+
         </div>
     </div>
     <!-- /.row -->

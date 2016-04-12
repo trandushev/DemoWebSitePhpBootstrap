@@ -11,10 +11,6 @@ class ToursController extends Controller {
 
         $toursCollection = new ToursCollection();
 
-
-
-
-
         $page = isset($_GET['page'])? (int)$_GET['page'] : 1;
         $perPage = 6;
         $offset  = ($page) ? ($page-1) * $perPage : 0;
@@ -56,6 +52,7 @@ class ToursController extends Controller {
         
         $toursCollection = new ToursCollection();
         $tour = $toursCollection->getOne($tourId);
+
 
         if ($tour === null) {
             header("Location: index.php?c=tours");

@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright © Your Website 2014
+                        Copyright © MeOutdoor 2016
                     </div>
                 </div>
             </div>

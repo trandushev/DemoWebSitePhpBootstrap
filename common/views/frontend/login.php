@@ -5,6 +5,15 @@
 
 <div class="col-sm-6 col-md-4 col-md-offset-4">
     <h1 class="text-center login-title">Sign in to continue to MeOutdoor</h1>
+    <?php
+
+    if(array_key_exists('login', $errors)) { ?>
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong><?php  echo $errors['login']; ?></strong>
+        </div>
+    <?php }
+    ?>
     <div class="account-wall">
         <form class="form-signin" method="post">
             <input name="username" type="text" class="form-control" placeholder="Username" required autofocus>
